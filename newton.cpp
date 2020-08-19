@@ -4,7 +4,8 @@
 #include <iostream>
 #include <vector>
 
-float square_root(float A, float x0, float x1){
+float square_root(float A, float x0){
+    float x1 = 0.5*(x0+A/x0);
     std::vector<float> x{x0, x1};
     
     int j=1;
@@ -17,6 +18,6 @@ float square_root(float A, float x0, float x1){
 }
 
 int main() {
-    std::cout << square_root(42,7.0,6.5) << "\n";
+    std::cout << square_root(42,7.0) << "\n";
     return 0;
 }
